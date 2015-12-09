@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Client Apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subdomain</th>
+      <th>Tenant name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_apps.each do |client_app| %>
+      <tr>
+        <td><%= client_app.name %></td>
+        <td><%= client_app.subdomain %></td>
+        <td><%= client_app.tenant_name %></td>
+        <td><%= link_to 'Show', client_app %></td>
+        <td><%= link_to 'Edit', edit_client_app_path(client_app) %></td>
+        <td><%= link_to 'Destroy', client_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client app', new_client_app_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client_app.name %>
+</p>
+
+<p>
+  <strong>Subdomain:</strong>
+  <%= @client_app.subdomain %>
+</p>
+
+<p>
+  <strong>Tenant name:</strong>
+  <%= @client_app.tenant_name %>
+</p>
+
+<%= link_to 'Edit', edit_client_app_path(@client_app) %> |
+<%= link_to 'Back', client_apps_path %>

@@ -1,0 +1,8 @@
+1. bundle install
+2. Set up config/database.yml Use Postgres
+3. rake db:create
+4. rake db:migrate
+5. c = ClientApp.new(:name=>"abc",:tenant_name=>"abc",:subdomain=>"abc")
+	c.save
+	c.shared_key	
+6. Use this key 	
